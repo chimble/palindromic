@@ -9,20 +9,31 @@ def compare_elements(a, b):
 
 def is_palindrome(newstring):
     newstring = stringer(newstring)
-    if len(newstring) == 0:
-        print("is palindrome")
-        return True
-    else:
-        if compare_elements(newstring[0], newstring[-1:]):
+    for character in newstring:
+        if character == newstring[-1:]:
             newstring = newstring[1:-1]
-            return is_palindrome(newstring)
+            if len(newstring) <=1:
+                return True
+            continue
         else:
-            print("is not palindrome")
             return False
+
+# def is_palindrome(newstring):
+#     newstring = stringer(newstring)
+#     if len(newstring) == 0:
+#         print("is palindrome")
+#         return True
+#     else:
+#         if compare_elements(newstring[0], newstring[-1:]):
+#             newstring = newstring[1:-1]
+#             return is_palindrome(newstring)
+#         else:
+#             print("is not palindrome")
+#             return False
 def main():
 
     string_gnirts = input("give me word/sentence please ")
-    string_gnirts = stringer(string_gnirts)
+    #string_gnirts = stringer(string_gnirts)
     print(is_palindrome(string_gnirts))
 
 def stringer(string_gnirts):
