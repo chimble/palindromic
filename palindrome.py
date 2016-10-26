@@ -1,4 +1,4 @@
-#NormalModeBOYZ
+#AdvancedModeBOYZ
 newstring = ''
 string_gnirts = ''
 def compare_elements(a, b):
