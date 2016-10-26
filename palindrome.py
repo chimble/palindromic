@@ -10,12 +10,14 @@ def compare_elements(a, b):
 def is_palindrome(newstring):
     newstring = stringer(newstring)
     if len(newstring) == 0:
+        print("is palindrome")
         return True
     else:
         if compare_elements(newstring[0], newstring[-1:]):
             newstring = newstring[1:-1]
             return is_palindrome(newstring)
         else:
+            print("is not palindrome")
             return False
 def main():
 
